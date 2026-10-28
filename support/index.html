@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RELO Support</title>
+<meta name="description" content="RELO 고객 지원 · Support · 帮助与支持 · サポート">
+<style>
+  :root {
+    --bg: #F4F6F9;
+    --card: #FFFFFF;
+    --ink: #1B1F26;
+    --muted: #636B78;
+    --line: #E3E7ED;
+    --blue: #2F6FED;
+    --blue-text: #2459C4;
+    --warn-bg: #FFF4E8;
+    --warn-ink: #A3540F;
+    --pending-bg: #EAF0FD;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171C;
+      --card: #1F242C;
+      --ink: #F4F6F9;
+      --muted: #A7AFBC;
+      --line: #2E3540;
+      --blue: #4F86F2;
+      --blue-text: #7FA6FF;
+      --warn-bg: #3A2A18;
+      --warn-ink: #F2B27A;
+      --pending-bg: #22304A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171C;
+    --card: #1F242C;
+    --ink: #F4F6F9;
+    --muted: #A7AFBC;
+    --line: #2E3540;
+    --blue: #4F86F2;
+    --blue-text: #7FA6FF;
+    --warn-bg: #3A2A18;
+    --warn-ink: #F2B27A;
+    --pending-bg: #22304A;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Hiragino Sans", "PingFang SC", "Noto Sans CJK KR", sans-serif;
+  }
+  header {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 16px 8px;
+  }
+  .brand { font-weight: 700; letter-spacing: 0.32em; font-size: 22px; margin: 0; }
+  .tagline { color: var(--muted); letter-spacing: 0.08em; margin: 2px 0 16px; font-size: 14px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  nav a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink);
+    background: var(--card);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  nav a[aria-current="true"] { background: var(--blue); border-color: var(--blue); color: #FFFFFF; }
+  main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 20px 8px;
+    margin: 16px 0;
+  }
+  .js section.hidden { display: none; }
+  h1 { font-size: 24px; line-height: 1.3; margin: 0 0 4px; }
+  h2 { font-size: 17px; margin: 24px 0 6px; }
+  p, li { overflow-wrap: anywhere; }
+  ul { padding-left: 20px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+  .draft-note {
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .pending {
+    display: inline-block;
+    background: var(--pending-bg);
+    color: var(--blue-text);
+    border-radius: 6px;
+    padding: 0 6px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 4px;
+    vertical-align: 1px;
+  }
+  .tbd { color: var(--warn-ink); font-weight: 600; }
+  a { color: var(--blue-text); }
+  h3 { font-size: 16px; margin: 18px 0 4px; }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 16px 32px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <p class="brand">RELO</p>
+  <p class="tagline">Release · Ease · Loosen · Open</p>
+  <nav aria-label="Language">
+    <a href="#ko" data-lang="ko" hreflang="ko">한국어</a>
+    <a href="#en" data-lang="en" hreflang="en">English</a>
+    <a href="#zh" data-lang="zh" hreflang="zh-Hans">简体中文</a>
+    <a href="#ja" data-lang="ja" hreflang="ja">日本語</a>
+    <a href="#de" data-lang="de" hreflang="de">Deutsch</a>
+    <a href="#fr" data-lang="fr" hreflang="fr">Français</a>
+    <a href="#es" data-lang="es" hreflang="es">Español</a>
+    <a href="#pt" data-lang="pt" hreflang="pt-BR">Português</a>
+    <a href="#zh-Hant" data-lang="zh-Hant" hreflang="zh-Hant">繁體中文</a>
+    <a href="#it" data-lang="it" hreflang="it">Italiano</a>
+    <a href="#pl" data-lang="pl" hreflang="pl">Polski</a>
+  </nav>
+</header>
+<main>
+
+<section id="ko" lang="ko">
+  <h1>RELO 고객 지원</h1>
+  <p class="meta">최종 수정: 2026-10-28</p>
+  <p>RELO를 쓰다가 궁금한 점이 생기면 아래 자주 묻는 질문을 먼저 확인해 주세요. 해결되지 않으면 이메일로 알려 주세요.</p>
+
+  <h2>문의하기</h2>
+  <p class="contact">이메일: <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>아래 내용을 함께 적어 주시면 더 빨리 확인할 수 있어요.</p>
+  <ul>
+    <li>앱 버전(앱 <strong>설정 › 정보 › 버전</strong>)</li>
+    <li>iPhone 모델과 iOS 버전</li>
+    <li>어느 화면에서 무엇을 했을 때 어떤 일이 생겼는지(화면 캡처가 있으면 좋아요)</li>
+    <li>구매나 개인정보에 관한 문의라면 <strong>지원 ID</strong>(앱 <strong>설정 › 데이터 › 지원 ID</strong>)</li>
+  </ul>
+  <p>보내 주신 메일은 모두 읽고 답하려고 하지만, 답장까지 걸리는 시간은 약속드리기 어려워요. 개인정보에 관한 요청은 개인정보 처리방침에 적힌 대로 처리합니다.</p>
+
+  <h2>자주 묻는 질문</h2>
+
+  <h3>구독은 어떻게 해지하나요?</h3>
+  <p>iPhone <strong>설정</strong> 앱 › 맨 위의 내 이름(<strong>Apple 계정</strong>) › <strong>구독</strong> › RELO에서 해지할 수 있어요. 구독 중이라면 RELO <strong>설정 › 프리미엄 › 구독 관리</strong>로도 같은 화면이 열려요.</p>
+  <ul>
+    <li>앱을 지워도 구독은 해지되지 않아요.</li>
+    <li>다음 결제일 24시간 전까지 해지하면 다음 기간 요금이 청구되지 않아요.</li>
+    <li>결제와 환불은 Apple이 처리해요. 환불은 <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>에서 Apple에 요청해 주세요.</li>
+  </ul>
+
+  <h3>기기를 바꿨거나 앱을 다시 설치했어요. 구매한 것을 되살리려면요?</h3>
+  <p>구매할 때 쓴 Apple 계정으로 로그인한 기기에서 RELO <strong>설정 › 프리미엄 › 구매 복원</strong>을 누르세요. 프리미엄 구독과 광고 제거가 다시 적용돼요. RELO는 회원가입이 없어서 구매를 Apple 계정으로 확인해요.</p>
+  <p>운동 기록과 Body Check 기록은 기기 안에만 있어서 구매 복원으로는 돌아오지 않아요. 기기 전체를 백업에서 복원하면 함께 돌아올 수 있어요.</p>
+
+  <h3>광고 제거와 프리미엄은 무엇이 다른가요?</h3>
+  <ul>
+    <li>스트레칭 루틴과 동작은 둘 다 없어도 모두 무료로 쓸 수 있어요.</li>
+    <li><strong>광고 제거</strong>: 한 번 사면 광고가 나오지 않아요. 구독이 아니고, 프리미엄 기능은 들어 있지 않아요.</li>
+    <li><strong>RELO 프리미엄</strong>: 월간·연간 자동 갱신 구독이에요. Body Check, 4주 밸런스 플랜, 상황 글 추천, 동작 질문, 주간·월간 리포트를 쓸 수 있고, 구독 중에는 광고도 나오지 않아요.</li>
+    <li>가격은 앱의 프리미엄 화면과 App Store에 나라별 통화로 표시돼요.</li>
+  </ul>
+
+  <h3>7일 무료 체험이 끝나면 어떻게 되나요?</h3>
+  <p>월간·연간 구독 모두 7일 무료 체험으로 시작할 수 있어요. 체험은 같은 Apple 계정에서 한 번만 쓸 수 있어요.</p>
+  <ul>
+    <li>체험이 끝나기 24시간 전까지 해지하지 않으면, 고른 요금제(월간 또는 연간)로 결제되고 그 뒤로 자동 갱신돼요.</li>
+    <li>알림을 허용해 두었다면 체험이 끝나기 2일 전에 앱이 알려 드려요.</li>
+    <li>해지하는 방법은 위의 "구독은 어떻게 해지하나요?"를 보세요.</li>
+    <li>구독하지 않아도 Body Check 1회, 상황 글 추천 3회, 동작 질문 3회는 무료로 써 볼 수 있어요.</li>
+  </ul>
+
+  <h3>기록을 지우고 싶어요</h3>
+  <ul>
+    <li>하나씩 지우기: <strong>기록</strong> 탭에서 지울 기록을 길게 누르면 여러 개를 골라 지울 수 있어요. Body Check 기록도 길게 눌러 지울 수 있어요.</li>
+    <li>한꺼번에 지우기: 앱 <strong>설정 › 데이터</strong>에서 <strong>기록 전체 삭제</strong>, <strong>Body Check 기록 지우기</strong>, <strong>불편 표시 지우기</strong>를 누르세요.</li>
+    <li>애플 건강에 기록한 운동은 건강 앱에서 지워 주세요.</li>
+    <li>앱을 삭제하면 기기 안의 기록이 모두 지워져요. 지운 기록은 되돌릴 수 없어요.</li>
+  </ul>
+
+  <h3>Body Check 사진은 어디에 저장되나요?</h3>
+  <p>사진은 저장하지 않아요. 찍거나 고른 사진에서 기기 안의 Apple Vision 기능으로 관절 위치만 읽고, 사진은 서버로 보내지 않아요. 기록에는 관절 위치와 기울기 값만 남아요. Body Check 결과는 사진에서 관찰한 참고용 값이며 의료적 진단이 아니에요.</p>
+
+  <h3>음성 안내가 내려받아지지 않아요</h3>
+  <p>영어 음성은 앱에 들어 있고, 다른 언어 음성은 그 언어를 고르거나 앱을 열 때 인터넷으로 내려받아요.</p>
+  <ul>
+    <li>인터넷 연결을 확인한 뒤 앱을 다시 열어 주세요.</li>
+    <li>앱 <strong>설정 › 소리</strong>에 "음성 받기 실패 · 다시 시도"가 보이면 눌러서 다시 받으세요. <strong>설정 › 언어</strong> 화면에 들어가도 다시 받아요.</li>
+    <li>기기 저장 공간이 부족하면 받지 못할 수 있어요.</li>
+    <li>다 받기 전에는 기기에 들어 있는 음성으로 안내해요.</li>
+    <li>소리가 전혀 나지 않으면 <strong>설정 › 소리</strong>에서 음성 안내가 켜져 있는지, 기기 소리 크기를 확인해 주세요.</li>
+  </ul>
+
+  <h3>알림이 오지 않아요</h3>
+  <ul>
+    <li>앱 <strong>설정 › 알림</strong>에서 "스트레칭 알림"이 켜져 있는지, 시간과 반복 요일을 확인해 주세요.</li>
+    <li>iPhone <strong>설정 › 알림 › RELO</strong>에서 알림이 허용되어 있는지 확인해 주세요.</li>
+    <li>집중 모드(방해 금지 등)가 켜져 있으면 알림이 보이지 않을 수 있어요.</li>
+    <li>알림은 기기 안에서 미리 예약돼요. 앱을 오래 열지 않으면 <strong>알림 기간</strong>(설정 › 알림)이 지난 뒤에는 알림이 멈춰요. 앱을 한 번 열면 다시 이어져요.</li>
+  </ul>
+
+  <h3>RELO는 의료 서비스인가요?</h3>
+  <p>아니요. RELO는 일반적인 스트레칭 안내이며 의료 조언이나 의료기기가 아니에요. 동작 중 통증이 느껴지면 바로 멈추세요. 지병이 있거나 임신 중이거나 수술을 받은 뒤라면 시작하기 전에 의사와 상담하세요. Body Check 결과와 AI 답변도 참고용이며 의료적 판단이 아니에요.</p>
+
+  <h2>개인정보</h2>
+  <p>RELO가 어떤 정보를 어떻게 다루는지는 <a href="https://accjang.github.io/relo-privacy/#ko">개인정보 처리방침</a>에서 볼 수 있어요. 앱에서는 <strong>설정 › 정보 › 개인정보 처리방침</strong>에서 열 수 있어요.</p>
+</section>
+
+<section id="en" lang="en">
+  <h1>RELO Support</h1>
+  <p class="meta">Last updated: 2026-10-28</p>
+  <p>If you have a question about RELO, please check the common questions below first. If they don't solve it, send us an email.</p>
+
+  <h2>Contact us</h2>
+  <p class="contact">Email: <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>It helps us look into things faster if you include:</p>
+  <ul>
+    <li>The app version (in the app: <strong>Settings › About › Version</strong>)</li>
+    <li>Your iPhone model and iOS version</li>
+    <li>Which screen you were on, what you did and what happened (a screenshot helps)</li>
+    <li>For questions about purchases or privacy, your <strong>Support ID</strong> (in the app: <strong>Settings › Data › Support ID</strong>)</li>
+  </ul>
+  <p>We read every email and try to reply, but we can't promise how long a reply will take. Privacy requests are handled as described in our Privacy Policy.</p>
+
+  <h2>Common questions</h2>
+
+  <h3>How do I cancel my subscription?</h3>
+  <p>Open the iPhone <strong>Settings</strong> app › your name at the top (<strong>Apple Account</strong>) › <strong>Subscriptions</strong> › RELO. While you're subscribed, <strong>Settings › Premium › Manage subscription</strong> in RELO opens the same screen.</p>
+  <ul>
+    <li>Deleting the app does not cancel your subscription.</li>
+    <li>Cancel at least 24 hours before your next billing date to avoid being charged for the next period.</li>
+    <li>Apple handles payments and refunds. To ask for a refund, go to <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ul>
+
+  <h3>I got a new device or reinstalled the app. How do I get my purchases back?</h3>
+  <p>On a device signed in with the Apple Account you used to buy, open RELO and tap <strong>Settings › Premium › Restore purchases</strong>. Your Premium subscription and Remove ads come back. RELO has no sign-up, so purchases are checked through your Apple Account.</p>
+  <p>Your history and Body Check results are stored only on your device, so restoring purchases does not bring them back. Restoring your whole device from a backup may bring them back too.</p>
+
+  <h3>What's the difference between Remove ads and Premium?</h3>
+  <ul>
+    <li>All stretching routines and moves are free with or without either one.</li>
+    <li><strong>Remove ads</strong>: a one-time purchase that turns off ads. It is not a subscription and does not include Premium features.</li>
+    <li><strong>RELO Premium</strong>: a monthly or yearly auto-renewing subscription. It adds Body Check, the 4-week balance plan, Describe &amp; get a routine, Ask about moves, and weekly &amp; monthly reports, and shows no ads while you're subscribed.</li>
+    <li>Prices are shown in your local currency on the Premium screen in the app and on the App Store.</li>
+  </ul>
+
+  <h3>What happens when the 7-day free trial ends?</h3>
+  <p>Both the monthly and the yearly plan start with a 7-day free trial. The trial can be used only once per Apple Account.</p>
+  <ul>
+    <li>Unless you cancel at least 24 hours before the trial ends, you are charged for the plan you chose (monthly or yearly), and it renews automatically after that.</li>
+    <li>If you allow notifications, the app reminds you 2 days before the trial ends.</li>
+    <li>To cancel, see "How do I cancel my subscription?" above.</li>
+    <li>Without subscribing, you can try Body Check once, Describe &amp; get a routine 3 times and Ask about moves 3 times for free.</li>
+  </ul>
+
+  <h3>How do I delete my history?</h3>
+  <ul>
+    <li>One at a time: in the <strong>History</strong> tab, touch and hold a record to select one or more and delete them. You can delete a Body Check record the same way.</li>
+    <li>All at once: in the app, go to <strong>Settings › Data</strong> and tap <strong>Delete all history</strong>, <strong>Clear Body Check history</strong> or <strong>Clear discomfort marks</strong>.</li>
+    <li>Workouts saved to Apple Health stay there. Delete them in the Health app.</li>
+    <li>Deleting the app removes all history on your device. Deleted history can't be recovered.</li>
+  </ul>
+
+  <h3>Where are my Body Check photos stored?</h3>
+  <p>They aren't stored. The app reads only the joint positions from the photo you take or choose, using Apple's Vision framework on your device, and never sends the photo to a server. Only joint positions and tilt values are kept. Body Check results are reference values observed in a photo, not a medical diagnosis.</p>
+
+  <h3>Voice guidance won't download</h3>
+  <p>English voice guidance is built into the app. Other languages are downloaded over the internet when you choose the language or open the app.</p>
+  <ul>
+    <li>Check your internet connection and open the app again.</li>
+    <li>If <strong>Settings › Sound</strong> shows "Voice download failed · Retry", tap it to try again. Opening <strong>Settings › Language</strong> also starts the download again.</li>
+    <li>The download may fail if your device is low on storage.</li>
+    <li>Until the download finishes, the app uses your device's built-in voice.</li>
+    <li>If there is no sound at all, check that Voice guidance is on in <strong>Settings › Sound</strong> and that your device volume is up.</li>
+  </ul>
+
+  <h3>I'm not getting reminders</h3>
+  <ul>
+    <li>In the app, check that "Stretch reminders" is on in <strong>Settings › Reminders</strong>, and check the time and repeat days.</li>
+    <li>In the iPhone <strong>Settings › Notifications › RELO</strong>, check that notifications are allowed.</li>
+    <li>A Focus (such as Do Not Disturb) may hide notifications.</li>
+    <li>Reminders are scheduled in advance on your device. If you don't open the app for a long time, they stop after the <strong>Reminder period</strong> (Settings › Reminders). Opening the app once starts them again.</li>
+  </ul>
+
+  <h3>Is RELO a medical service?</h3>
+  <p>No. RELO offers general stretching guidance. It is not medical advice and not a medical device. Stop right away if anything hurts. If you have a medical condition, are pregnant, or have recently had surgery, check with your doctor before you start. Body Check results and AI answers are for reference only and are not a medical assessment.</p>
+
+  <h2>Privacy</h2>
+  <p>To learn what information RELO handles and how, read our <a href="https://accjang.github.io/relo-privacy/#en">Privacy Policy</a>. In the app, open it from <strong>Settings › About › Privacy Policy</strong>.</p>
+</section>
+
+<section id="zh" lang="zh-Hans">
+  <h1>RELO 客户支持</h1>
+  <p class="meta">最后更新：2026-10-28</p>
+  <p>如果你对 RELO 有疑问，请先查看下面的常见问题。如果仍未解决，欢迎发邮件告诉我们。</p>
+
+  <h2>联系我们</h2>
+  <p class="contact">电子邮件：<a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>邮件中附上以下信息，可以帮助我们更快地查看问题：</p>
+  <ul>
+    <li>App 版本（在 App 中：<strong>设置 › 关于 › 版本</strong>）</li>
+    <li>你的 iPhone 机型和 iOS 版本</li>
+    <li>你当时在哪个页面、做了什么、发生了什么（附上截图会更好）</li>
+    <li>如果是关于购买或隐私的问题，请附上你的<strong>支持 ID</strong>（在 App 中：<strong>设置 › 数据 › 支持 ID</strong>）</li>
+  </ul>
+  <p>每封邮件我们都会阅读并尽量回复，但无法保证回复所需的时间。隐私相关的请求会按照我们的隐私政策中所述的方式处理。</p>
+
+  <h2>常见问题</h2>
+
+  <h3>如何取消订阅？</h3>
+  <p>打开 iPhone 的<strong>设置</strong> App › 顶部你的名字（<strong>Apple 账户</strong>）› <strong>订阅</strong> › RELO。订阅期间，在 RELO 中点按<strong>设置 › 高级版 › 管理订阅</strong>也会打开同一个页面。</p>
+  <ul>
+    <li>删除 App 不会取消订阅。</li>
+    <li>请至少在下一个扣费日期的 24 小时前取消，这样就不会被收取下一个周期的费用。</li>
+    <li>付款和退款由 Apple 处理。如需申请退款，请前往 <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>。</li>
+  </ul>
+
+  <h3>换了新设备或重新安装了 App，怎样找回购买的项目？</h3>
+  <p>在登录了购买时所用 Apple 账户的设备上打开 RELO，点按<strong>设置 › 高级版 › 恢复购买</strong>。高级版订阅和去除广告会重新生效。RELO 无需注册，因此会通过你的 Apple 账户确认购买。</p>
+  <p>你的训练记录和 Body Check 记录只保存在你的设备上，所以恢复购买不会找回它们。从备份恢复整台设备时，它们也可能一并恢复。</p>
+
+  <h3>去除广告和高级版有什么区别？</h3>
+  <ul>
+    <li>无论是否购买其中任何一项，所有拉伸练习和动作都可以免费使用。</li>
+    <li><strong>去除广告</strong>：一次性购买，购买后不再显示广告。它不是订阅，也不包含高级版功能。</li>
+    <li><strong>RELO 高级版</strong>：按月或按年自动续订的订阅。可以使用 Body Check、4 周平衡计划、描述状态获取推荐、动作提问和每周·每月报告，订阅期间也不会显示广告。</li>
+    <li>价格以你所在地区的货币显示在 App 的高级版页面和 App Store 上。</li>
+  </ul>
+
+  <h3>7 天免费试用结束后会怎样？</h3>
+  <p>按月和按年方案都从 7 天免费试用开始。每个 Apple 账户只能使用一次免费试用。</p>
+  <ul>
+    <li>除非你在试用结束前至少 24 小时取消，否则会按你选择的方案（按月或按年）扣费，之后自动续订。</li>
+    <li>如果你允许了通知，App 会在试用结束前 2 天提醒你。</li>
+    <li>取消方法请参阅上面的“如何取消订阅？”。</li>
+    <li>即使不订阅，也可以免费试用 Body Check 1 次、描述状态获取推荐 3 次、动作提问 3 次。</li>
+  </ul>
+
+  <h3>如何删除记录？</h3>
+  <ul>
+    <li>逐条删除：在<strong>记录</strong>标签页中，按住一条记录即可选择一条或多条并删除。Body Check 记录也可以用同样的方法删除。</li>
+    <li>全部删除：在 App 中前往<strong>设置 › 数据</strong>，点按<strong>删除全部记录</strong>、<strong>清除 Body Check 记录</strong>或<strong>清除不适标记</strong>。</li>
+    <li>已保存到“健康”的体能训练会保留在那里，请在“健康”App 中删除。</li>
+    <li>删除 App 会删除设备上的所有记录。已删除的记录无法恢复。</li>
+  </ul>
+
+  <h3>Body Check 的照片保存在哪里？</h3>
+  <p>照片不会被保存。App 在你的设备上使用 Apple 的 Vision 功能，只从你拍摄或选择的照片中读取关节位置，照片绝不会发送到服务器。只保留关节位置和倾斜数值。Body Check 结果是从照片中观察到的参考数值，并非医学判断。</p>
+
+  <h3>语音指导无法下载</h3>
+  <p>英语语音指导已内置在 App 中。其他语言会在你选择该语言或打开 App 时通过网络下载。</p>
+  <ul>
+    <li>请检查网络连接，然后重新打开 App。</li>
+    <li>如果<strong>设置 › 声音</strong>中显示“语音下载失败 · 重试”，点按它即可重新下载。打开<strong>设置 › 语言</strong>也会重新开始下载。</li>
+    <li>如果设备存储空间不足，下载可能会失败。</li>
+    <li>下载完成之前，App 会使用设备自带的语音。</li>
+    <li>如果完全没有声音，请确认<strong>设置 › 声音</strong>中的语音指导已开启，并检查设备音量是否已调高。</li>
+  </ul>
+
+  <h3>收不到提醒</h3>
+  <ul>
+    <li>在 App 的<strong>设置 › 提醒</strong>中，确认“拉伸提醒”已开启，并检查时间和重复的日子。</li>
+    <li>在 iPhone 的<strong>设置 › 通知 › RELO</strong> 中，确认已允许通知。</li>
+    <li>专注模式（例如勿扰模式）可能会让通知不显示。</li>
+    <li>提醒是在你的设备上提前安排好的。如果你很长时间没有打开 App，提醒会在<strong>提醒时长</strong>（设置 › 提醒）结束后停止。打开一次 App 即可重新开始。</li>
+  </ul>
+
+  <h3>RELO 是医疗服务吗？</h3>
+  <p>不是。RELO 提供一般性的拉伸指导，并非医疗建议，也不是医疗器械。如感到疼痛，请立即停止。如有基础疾病、正在怀孕或最近做过手术，请在开始前先咨询医生。Body Check 结果和 AI 回答仅供参考，并非医学判断。</p>
+
+  <h2>隐私</h2>
+  <p>想了解 RELO 处理哪些信息以及如何处理，请阅读我们的<a href="https://accjang.github.io/relo-privacy/#zh">隐私政策</a>。在 App 中，可以从<strong>设置 › 关于 › 隐私政策</strong>打开。</p>
+</section>
+
+<section id="ja" lang="ja">
+  <h1>RELO サポート</h1>
+  <p class="meta">最終更新：2026-10-28</p>
+  <p>RELO について気になることがあれば、まず下のよくある質問をご確認ください。それでも解決しない場合は、メールでお知らせください。</p>
+
+  <h2>お問い合わせ</h2>
+  <p class="contact">メール：<a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>次の内容を書き添えていただくと、より早く確認できます。</p>
+  <ul>
+    <li>アプリのバージョン（アプリの<strong>設定 › 情報 › バージョン</strong>）</li>
+    <li>iPhone の機種と iOS のバージョン</li>
+    <li>どの画面で何をしたときに何が起きたか（スクリーンショットがあると助かります）</li>
+    <li>購入やプライバシーについてのお問い合わせの場合は、<strong>サポート ID</strong>（アプリの<strong>設定 › データ › サポート ID</strong>）</li>
+  </ul>
+  <p>いただいたメールはすべて読み、お返事するよう努めていますが、お返事までにかかる時間はお約束できません。プライバシーに関するご依頼は、プライバシーポリシーに記載したとおりに対応します。</p>
+
+  <h2>よくある質問</h2>
+
+  <h3>サブスクリプションを解約するには？</h3>
+  <p>iPhone の<strong>設定</strong> App › 一番上のあなたの名前（<strong>Apple アカウント</strong>）› <strong>サブスクリプション</strong> › RELO から解約できます。登録中であれば、RELO の<strong>設定 › プレミアム › サブスクリプションを管理</strong>からも同じ画面が開きます。</p>
+  <ul>
+    <li>アプリを削除しても、サブスクリプションは解約されません。</li>
+    <li>次の請求日の 24 時間前までに解約すれば、次の期間の料金は請求されません。</li>
+    <li>支払いと返金は Apple が扱います。返金のご依頼は <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a> からどうぞ。</li>
+  </ul>
+
+  <h3>機種変更やアプリの再インストールをしました。購入したものを戻すには？</h3>
+  <p>購入時の Apple アカウントでサインインしている端末で RELO を開き、<strong>設定 › プレミアム › 購入を復元</strong>をタップしてください。プレミアムのサブスクリプションと広告の削除が再び適用されます。RELO には会員登録がないため、購入は Apple アカウントで確認します。</p>
+  <p>運動の記録と Body Check の記録は端末の中にだけあるため、購入を復元しても戻りません。端末全体をバックアップから復元すると、一緒に戻ることがあります。</p>
+
+  <h3>広告の削除とプレミアムの違いは？</h3>
+  <ul>
+    <li>どちらもなくても、ストレッチのルーティンと動作はすべて無料で使えます。</li>
+    <li><strong>広告を削除</strong>：1回買えば広告が表示されなくなる買い切りの購入です。サブスクリプションではなく、プレミアムの機能は含まれません。</li>
+    <li><strong>RELO プレミアム</strong>：月額または年額の自動更新サブスクリプションです。Body Check、4週間バランスプラン、ひとことでおすすめ、動作の質問、週間・月間レポートが使え、登録中は広告も表示されません。</li>
+    <li>価格は、アプリのプレミアム画面と App Store にお住まいの地域の通貨で表示されます。</li>
+  </ul>
+
+  <h3>7日間の無料体験が終わるとどうなりますか？</h3>
+  <p>月額プランと年額プランのどちらも、7日間の無料体験から始まります。無料体験は Apple アカウントごとに1回だけ利用できます。</p>
+  <ul>
+    <li>体験が終わる 24 時間前までに解約しなければ、選んだプラン（月額または年額）の料金が請求され、その後は自動更新されます。</li>
+    <li>通知を許可している場合は、体験が終わる 2 日前にアプリがお知らせします。</li>
+    <li>解約の方法は、上の「サブスクリプションを解約するには？」をご覧ください。</li>
+    <li>登録しなくても、Body Check を1回、ひとことでおすすめを3回、動作の質問を3回まで無料でお試しいただけます。</li>
+  </ul>
+
+  <h3>記録を削除するには？</h3>
+  <ul>
+    <li>1件ずつ削除：<strong>記録</strong>タブで記録を長押しすると、1件または複数件を選んで削除できます。Body Check の記録も同じ方法で削除できます。</li>
+    <li>まとめて削除：アプリの<strong>設定 › データ</strong>で、<strong>記録をすべて削除</strong>、<strong>Body Check の記録を消去</strong>、<strong>「つらかった」の記録を消去</strong>のいずれかをタップしてください。</li>
+    <li>「ヘルスケア」に保存したワークアウトはそのまま残ります。「ヘルスケア」App で削除してください。</li>
+    <li>アプリを削除すると、端末内の記録はすべて削除されます。削除した記録は元に戻せません。</li>
+  </ul>
+
+  <h3>Body Check の写真はどこに保存されますか？</h3>
+  <p>写真は保存しません。撮影または選択した写真から、端末内で Apple の Vision 機能を使って関節の位置だけを読み取り、写真をサーバーに送ることはありません。残るのは関節の位置と傾きの値だけです。Body Check の結果は写真から観察された参考値であり、医学的な判断ではありません。</p>
+
+  <h3>音声ガイドがダウンロードできません</h3>
+  <p>英語の音声ガイドはアプリに入っています。ほかの言語は、その言語を選んだときやアプリを開いたときにインターネット経由でダウンロードされます。</p>
+  <ul>
+    <li>インターネット接続を確認してから、アプリを開き直してください。</li>
+    <li><strong>設定 › サウンド</strong>に「音声のダウンロードに失敗 · 再試行」と表示されている場合は、タップするともう一度ダウンロードします。<strong>設定 › 言語</strong>を開いてもダウンロードが再開されます。</li>
+    <li>端末のストレージが足りないと、ダウンロードできないことがあります。</li>
+    <li>ダウンロードが終わるまでは、端末に内蔵された音声で案内します。</li>
+    <li>まったく音が出ない場合は、<strong>設定 › サウンド</strong>で音声ガイドがオンになっているか、端末の音量が上がっているかを確認してください。</li>
+  </ul>
+
+  <h3>通知が届きません</h3>
+  <ul>
+    <li>アプリの<strong>設定 › 通知</strong>で「ストレッチの通知」がオンになっているか、時刻と繰り返す曜日を確認してください。</li>
+    <li>iPhone の<strong>設定 › 通知 › RELO</strong>で、通知が許可されているか確認してください。</li>
+    <li>集中モード（「おやすみモード」など）がオンになっていると、通知が表示されないことがあります。</li>
+    <li>通知は端末内であらかじめ予約されます。長い間アプリを開かないと、<strong>通知の期間</strong>（設定 › 通知）が過ぎた後は通知が止まります。アプリを一度開けば再開します。</li>
+  </ul>
+
+  <h3>RELO は医療サービスですか？</h3>
+  <p>いいえ。RELO は一般的なストレッチの案内であり、医療上のアドバイスではなく、医療機器でもありません。痛みを感じたら、すぐに中止してください。持病のある方、妊娠中の方、最近手術を受けた方は、始める前に医師にご相談ください。Body Check の結果と AI の回答も参考用であり、医学的な判断ではありません。</p>
+
+  <h2>プライバシー</h2>
+  <p>RELO がどのような情報をどのように扱うかは、<a href="https://accjang.github.io/relo-privacy/#ja">プライバシーポリシー</a>でご確認いただけます。アプリでは<strong>設定 › 情報 › プライバシーポリシー</strong>から開けます。</p>
+</section>
+
+<section id="de" lang="de">
+  <h1>RELO Support</h1>
+  <p class="meta">Zuletzt aktualisiert: 2026-10-28</p>
+  <p>Wenn Sie eine Frage zu RELO haben, sehen Sie bitte zuerst unten in den häufigen Fragen nach. Hilft Ihnen das nicht weiter, schreiben Sie uns eine E-Mail.</p>
+
+  <h2>Kontakt</h2>
+  <p class="contact">E-Mail: <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>Wir können Ihr Anliegen schneller prüfen, wenn Sie Folgendes angeben:</p>
+  <ul>
+    <li>Die App-Version (in der App: <strong>Einstellungen › Info › Version</strong>)</li>
+    <li>Ihr iPhone-Modell und Ihre iOS-Version</li>
+    <li>Auf welchem Bildschirm Sie waren, was Sie getan haben und was passiert ist (ein Bildschirmfoto hilft)</li>
+    <li>Bei Fragen zu Käufen oder zum Datenschutz Ihre <strong>Support-ID</strong> (in der App: <strong>Einstellungen › Daten › Support-ID</strong>)</li>
+  </ul>
+  <p>Wir lesen jede E-Mail und versuchen zu antworten, können aber nicht versprechen, wie lange eine Antwort dauert. Anfragen zum Datenschutz bearbeiten wir wie in unserer Datenschutzerklärung beschrieben.</p>
+
+  <h2>Häufige Fragen</h2>
+
+  <h3>Wie kündige ich mein Abo?</h3>
+  <p>Öffnen Sie auf dem iPhone die App <strong>Einstellungen</strong> › Ihren Namen ganz oben (<strong>Apple Account</strong>) › <strong>Abonnements</strong> › RELO. Solange Sie Premium abonniert haben, öffnet <strong>Einstellungen › Premium › Abo verwalten</strong> in RELO denselben Bildschirm.</p>
+  <ul>
+    <li>Wenn Sie die App löschen, wird Ihr Abo nicht gekündigt.</li>
+    <li>Kündigen Sie spätestens 24 Stunden vor dem nächsten Abrechnungsdatum, damit Ihnen der nächste Zeitraum nicht berechnet wird.</li>
+    <li>Zahlungen und Rückerstattungen wickelt Apple ab. Eine Rückerstattung können Sie unter <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a> anfordern.</li>
+  </ul>
+
+  <h3>Ich habe ein neues Gerät oder die App neu installiert. Wie bekomme ich meine Käufe zurück?</h3>
+  <p>Öffnen Sie RELO auf einem Gerät, das mit dem Apple Account angemeldet ist, mit dem Sie gekauft haben, und tippen Sie auf <strong>Einstellungen › Premium › Käufe wiederherstellen</strong>. Ihr Premium-Abo und „Werbung entfernen“ sind dann wieder aktiv. RELO hat keine Registrierung, daher werden Käufe über Ihren Apple Account geprüft.</p>
+  <p>Ihr Verlauf und Ihre Ergebnisse von Body Check sind nur auf Ihrem Gerät gespeichert und kommen daher durch das Wiederherstellen von Käufen nicht zurück. Wenn Sie Ihr ganzes Gerät aus einem Backup wiederherstellen, können sie ebenfalls zurückkommen.</p>
+
+  <h3>Was ist der Unterschied zwischen „Werbung entfernen“ und Premium?</h3>
+  <ul>
+    <li>Alle Dehnroutinen und Übungen sind kostenlos – mit oder ohne eines von beiden.</li>
+    <li><strong>Werbung entfernen</strong>: ein einmaliger Kauf, der die Werbung abschaltet. Es ist kein Abo und enthält keine Premium-Funktionen.</li>
+    <li><strong>RELO Premium</strong>: ein monatliches oder jährliches Abo, das sich automatisch verlängert. Es bietet Body Check, den 4-Wochen-Balance-Plan, „Beschreiben &amp; Routine erhalten“, „Fragen zur Übung“ sowie Wochen- &amp; Monatsberichte und zeigt keine Werbung, solange Sie abonniert haben.</li>
+    <li>Die Preise werden in Ihrer Landeswährung auf dem Premium-Bildschirm der App und im App Store angezeigt.</li>
+  </ul>
+
+  <h3>Was passiert, wenn die 7-tägige kostenlose Testphase endet?</h3>
+  <p>Sowohl das Monats- als auch das Jahresabo beginnen mit einer 7-tägigen kostenlosen Testphase. Die Testphase kann pro Apple Account nur einmal genutzt werden.</p>
+  <ul>
+    <li>Wenn Sie nicht spätestens 24 Stunden vor Ende der Testphase kündigen, wird Ihnen das gewählte Abo (monatlich oder jährlich) berechnet, und danach verlängert es sich automatisch.</li>
+    <li>Wenn Sie Mitteilungen erlauben, erinnert die App Sie 2 Tage vor Ende der Testphase.</li>
+    <li>Wie Sie kündigen, lesen Sie oben unter „Wie kündige ich mein Abo?“.</li>
+    <li>Ohne Abo können Sie Body Check einmal, „Beschreiben &amp; Routine erhalten“ 3-mal und „Fragen zur Übung“ 3-mal kostenlos ausprobieren.</li>
+  </ul>
+
+  <h3>Wie lösche ich meinen Verlauf?</h3>
+  <ul>
+    <li>Einzeln: Drücken Sie im Tab <strong>Verlauf</strong> lange auf einen Eintrag, um einen oder mehrere Einträge auszuwählen und zu löschen. Einträge von Body Check löschen Sie auf dieselbe Weise.</li>
+    <li>Alle auf einmal: Gehen Sie in der App zu <strong>Einstellungen › Daten</strong> und tippen Sie auf <strong>Gesamten Verlauf löschen</strong>, <strong>Body Check: Verlauf löschen</strong> oder <strong>Markierungen „Unangenehm“ löschen</strong>.</li>
+    <li>In Health gespeicherte Trainings bleiben dort. Löschen Sie sie in der Health-App.</li>
+    <li>Wenn Sie die App löschen, wird der gesamte Verlauf auf Ihrem Gerät entfernt. Gelöschter Verlauf kann nicht wiederhergestellt werden.</li>
+  </ul>
+
+  <h3>Wo werden meine Fotos von Body Check gespeichert?</h3>
+  <p>Sie werden nicht gespeichert. Die App liest mit Apples Vision-Framework auf Ihrem Gerät nur die Gelenkpositionen aus dem Foto, das Sie aufnehmen oder auswählen, und sendet das Foto nie an einen Server. Gespeichert werden nur Gelenkpositionen und Neigungswerte. Die Ergebnisse von Body Check sind Orientierungswerte, die auf dem Foto beobachtet wurden, und keine medizinische Diagnose.</p>
+
+  <h3>Die Sprachansagen werden nicht geladen</h3>
+  <p>Die englischen Sprachansagen sind in die App integriert. Andere Sprachen werden über das Internet geladen, wenn Sie die Sprache auswählen oder die App öffnen.</p>
+  <ul>
+    <li>Prüfen Sie Ihre Internetverbindung und öffnen Sie die App erneut.</li>
+    <li>Wenn unter <strong>Einstellungen › Ton</strong> „Stimme nicht geladen · Erneut versuchen“ angezeigt wird, tippen Sie darauf, um es erneut zu versuchen. Auch wenn Sie <strong>Einstellungen › Sprache</strong> öffnen, startet der Download erneut.</li>
+    <li>Wenn auf Ihrem Gerät wenig Speicherplatz frei ist, kann der Download fehlschlagen.</li>
+    <li>Bis der Download abgeschlossen ist, verwendet die App die integrierte Stimme Ihres Geräts.</li>
+    <li>Wenn gar nichts zu hören ist, prüfen Sie, ob „Sprachansagen“ unter <strong>Einstellungen › Ton</strong> eingeschaltet und die Lautstärke Ihres Geräts aufgedreht ist.</li>
+  </ul>
+
+  <h3>Ich erhalte keine Erinnerungen</h3>
+  <ul>
+    <li>Prüfen Sie in der App unter <strong>Einstellungen › Erinnerungen</strong>, ob „Dehn-Erinnerungen“ eingeschaltet ist, und prüfen Sie die Uhrzeit und die Wiederholungstage.</li>
+    <li>Prüfen Sie in den iPhone-<strong>Einstellungen › Mitteilungen › RELO</strong>, ob Mitteilungen erlaubt sind.</li>
+    <li>Ein Fokus (z.&nbsp;B. „Nicht stören“) kann Mitteilungen ausblenden.</li>
+    <li>Erinnerungen werden im Voraus auf Ihrem Gerät geplant. Wenn Sie die App lange nicht öffnen, enden sie nach dem <strong>Erinnerungszeitraum</strong> (Einstellungen › Erinnerungen). Sobald Sie die App einmal öffnen, laufen sie wieder weiter.</li>
+  </ul>
+
+  <h3>Ist RELO ein medizinischer Dienst?</h3>
+  <p>Nein. RELO bietet allgemeine Anleitungen zum Dehnen. Es ist keine medizinische Beratung und kein Medizinprodukt. Wenn etwas schmerzt, hören Sie sofort auf. Wenn Sie eine Vorerkrankung haben, schwanger sind oder vor Kurzem operiert wurden, sprechen Sie vor dem Start mit Ihrer Ärztin oder Ihrem Arzt. Ergebnisse von Body Check und Antworten der KI dienen nur zur Orientierung und sind keine medizinische Beurteilung.</p>
+
+  <h2>Datenschutz</h2>
+  <p>Welche Informationen RELO verarbeitet und wie, lesen Sie in unserer <a href="https://accjang.github.io/relo-privacy/#de">Datenschutzerklärung</a>. In der App öffnen Sie sie unter <strong>Einstellungen › Info › Datenschutzerklärung</strong>.</p>
+</section>
+
+<section id="fr" lang="fr">
+  <h1>Assistance RELO</h1>
+  <p class="meta">Dernière mise à jour : 2026-10-28</p>
+  <p>Si vous avez une question sur RELO, consultez d’abord les questions fréquentes ci-dessous. Si elles ne répondent pas à votre question, écrivez-nous par e-mail.</p>
+
+  <h2>Nous contacter</h2>
+  <p class="contact">E-mail : <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>Pour que nous puissions examiner votre demande plus rapidement, merci d’indiquer :</p>
+  <ul>
+    <li>La version de l’app (dans l’app : <strong>Réglages › À propos › Version</strong>)</li>
+    <li>Le modèle de votre iPhone et votre version d’iOS</li>
+    <li>L’écran sur lequel vous étiez, ce que vous avez fait et ce qui s’est passé (une capture d’écran nous aide)</li>
+    <li>Pour une question sur un achat ou la confidentialité, votre <strong>ID d’assistance</strong> (dans l’app : <strong>Réglages › Données › ID d’assistance</strong>)</li>
+  </ul>
+  <p>Nous lisons chaque e-mail et essayons d’y répondre, mais nous ne pouvons pas garantir de délai de réponse. Les demandes liées à la vie privée sont gérées comme décrit dans notre Politique de confidentialité.</p>
+
+  <h2>Questions fréquentes</h2>
+
+  <h3>Comment résilier mon abonnement ?</h3>
+  <p>Ouvrez l’app <strong>Réglages</strong> de l’iPhone › votre nom en haut (<strong>Compte Apple</strong>) › <strong>Abonnements</strong> › RELO. Pendant votre abonnement, <strong>Réglages › Premium › Gérer l’abonnement</strong> dans RELO ouvre le même écran.</p>
+  <ul>
+    <li>Supprimer l’app ne résilie pas votre abonnement.</li>
+    <li>Résiliez au moins 24 heures avant votre prochaine date de facturation pour que la période suivante ne vous soit pas facturée.</li>
+    <li>Apple gère les paiements et les remboursements. Pour demander un remboursement, rendez-vous sur <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ul>
+
+  <h3>J’ai un nouvel appareil ou j’ai réinstallé l’app. Comment récupérer mes achats ?</h3>
+  <p>Sur un appareil connecté avec le compte Apple utilisé pour l’achat, ouvrez RELO et touchez <strong>Réglages › Premium › Restaurer les achats</strong>. Votre abonnement Premium et « Supprimer les pubs » sont rétablis. RELO ne demande aucune inscription : vos achats sont vérifiés via votre compte Apple.</p>
+  <p>Votre historique et vos résultats Body Check sont stockés uniquement sur votre appareil ; restaurer les achats ne les récupère donc pas. Si vous restaurez tout votre appareil à partir d’une sauvegarde, ils peuvent aussi revenir.</p>
+
+  <h3>Quelle est la différence entre « Supprimer les pubs » et Premium ?</h3>
+  <ul>
+    <li>Toutes les routines et tous les exercices d’étirement sont gratuits, avec ou sans l’un ou l’autre.</li>
+    <li><strong>Supprimer les pubs</strong> : un achat unique qui désactive les publicités. Ce n’est pas un abonnement et il n’inclut pas les fonctions Premium.</li>
+    <li><strong>RELO Premium</strong> : un abonnement mensuel ou annuel à renouvellement automatique. Il ajoute Body Check, « Programme équilibre 4 semaines », « Décrire et obtenir une routine », « Questions sur l’exercice » et « Bilans hebdomadaires et mensuels », et n’affiche aucune publicité pendant votre abonnement.</li>
+    <li>Les prix sont affichés dans votre devise locale sur l’écran Premium de l’app et sur l’App Store.</li>
+  </ul>
+
+  <h3>Que se passe-t-il à la fin de l’essai gratuit de 7 jours ?</h3>
+  <p>Les formules mensuelle et annuelle commencent toutes deux par un essai gratuit de 7 jours. L’essai ne peut être utilisé qu’une seule fois par compte Apple.</p>
+  <ul>
+    <li>Si vous ne résiliez pas au moins 24 heures avant la fin de l’essai, la formule choisie (mensuelle ou annuelle) vous est facturée, puis elle se renouvelle automatiquement.</li>
+    <li>Si vous autorisez les notifications, l’app vous envoie un rappel 2 jours avant la fin de l’essai.</li>
+    <li>Pour résilier, consultez « Comment résilier mon abonnement ? » ci-dessus.</li>
+    <li>Sans abonnement, vous pouvez essayer gratuitement Body Check une fois, « Décrire et obtenir une routine » 3 fois et « Questions sur l’exercice » 3 fois.</li>
+  </ul>
+
+  <h3>Comment supprimer mon historique ?</h3>
+  <ul>
+    <li>Une entrée à la fois : dans l’onglet <strong>Historique</strong>, appuyez longuement sur une entrée pour en sélectionner une ou plusieurs et les supprimer. Vous pouvez supprimer une entrée Body Check de la même façon.</li>
+    <li>Tout d’un coup : dans l’app, allez dans <strong>Réglages › Données</strong> et touchez <strong>Effacer tout l’historique</strong>, <strong>Effacer l’historique Body Check</strong> ou <strong>Effacer les marques « Inconfortable »</strong>.</li>
+    <li>Les séances enregistrées dans Santé y restent. Supprimez-les dans l’app Santé.</li>
+    <li>Supprimer l’app efface tout l’historique de votre appareil. Un historique supprimé ne peut pas être récupéré.</li>
+  </ul>
+
+  <h3>Où sont stockées mes photos Body Check ?</h3>
+  <p>Elles ne sont pas stockées. L’app lit uniquement la position des articulations sur la photo que vous prenez ou choisissez, à l’aide du framework Vision d’Apple sur votre appareil, et n’envoie jamais la photo à un serveur. Seules les positions des articulations et les valeurs d’inclinaison sont conservées. Les résultats Body Check sont des valeurs de référence observées sur une photo, pas un diagnostic médical.</p>
+
+  <h3>Le guidage vocal ne se télécharge pas</h3>
+  <p>Le guidage vocal en anglais est intégré à l’app. Les autres langues sont téléchargées par Internet lorsque vous choisissez la langue ou ouvrez l’app.</p>
+  <ul>
+    <li>Vérifiez votre connexion Internet et rouvrez l’app.</li>
+    <li>Si <strong>Réglages › Son</strong> affiche « Voix non téléchargée · Réessayer », touchez ce message pour réessayer. Ouvrir <strong>Réglages › Langue</strong> relance aussi le téléchargement.</li>
+    <li>Le téléchargement peut échouer si l’espace de stockage de votre appareil est insuffisant.</li>
+    <li>Tant que le téléchargement n’est pas terminé, l’app utilise la voix intégrée de votre appareil.</li>
+    <li>S’il n’y a aucun son, vérifiez que le Guidage vocal est activé dans <strong>Réglages › Son</strong> et que le volume de votre appareil est monté.</li>
+  </ul>
+
+  <h3>Je ne reçois pas de rappels</h3>
+  <ul>
+    <li>Dans l’app, vérifiez que « Rappels d’étirement » est activé dans <strong>Réglages › Rappels</strong>, ainsi que l’heure et les jours de répétition.</li>
+    <li>Dans <strong>Réglages › Notifications › RELO</strong> de l’iPhone, vérifiez que les notifications sont autorisées.</li>
+    <li>Un mode de concentration (comme Ne pas déranger) peut masquer les notifications.</li>
+    <li>Les rappels sont programmés à l’avance sur votre appareil. Si vous n’ouvrez pas l’app pendant longtemps, ils s’arrêtent à la fin de la <strong>Durée des rappels</strong> (Réglages › Rappels). Il suffit d’ouvrir l’app une fois pour les relancer.</li>
+  </ul>
+
+  <h3>RELO est-il un service médical ?</h3>
+  <p>Non. RELO propose des conseils généraux d’étirement. Il ne s’agit pas de conseils médicaux, et RELO n’est pas un dispositif médical. En cas de douleur, arrêtez immédiatement. Si vous avez un problème de santé, êtes enceinte ou avez subi une opération récemment, consultez votre médecin avant de commencer. Les résultats Body Check et les réponses de l’IA sont fournis à titre indicatif uniquement et ne constituent pas une évaluation médicale.</p>
+
+  <h2>Confidentialité</h2>
+  <p>Pour savoir quelles informations RELO utilise et comment, consultez notre <a href="https://accjang.github.io/relo-privacy/#fr">Politique de confidentialité</a>. Dans l’app, ouvrez-la depuis <strong>Réglages › À propos › Politique de confidentialité</strong>.</p>
+</section>
+
+<section id="es" lang="es">
+  <h1>Soporte de RELO</h1>
+  <p class="meta">Última actualización: 2026-10-28</p>
+  <p>Si tienes alguna pregunta sobre RELO, primero revisa las preguntas frecuentes de abajo. Si no resuelven tu duda, envíanos un correo electrónico.</p>
+
+  <h2>Contáctanos</h2>
+  <p class="contact">Correo electrónico: <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>Podemos revisar tu caso más rápido si incluyes:</p>
+  <ul>
+    <li>La versión de la app (en la app: <strong>Configuración › Acerca de › Versión</strong>)</li>
+    <li>El modelo de tu iPhone y la versión de iOS</li>
+    <li>En qué pantalla estabas, qué hiciste y qué pasó (una captura de pantalla ayuda)</li>
+    <li>Si tu pregunta es sobre compras o privacidad, tu <strong>ID de soporte</strong> (en la app: <strong>Configuración › Datos › ID de soporte</strong>)</li>
+  </ul>
+  <p>Leemos todos los correos e intentamos responder, pero no podemos prometer cuánto tardará la respuesta. Las solicitudes de privacidad se atienden como se describe en nuestra Política de privacidad.</p>
+
+  <h2>Preguntas frecuentes</h2>
+
+  <h3>¿Cómo cancelo mi suscripción?</h3>
+  <p>Abre la app <strong>Configuración</strong> del iPhone › tu nombre en la parte superior (<strong>Cuenta de Apple</strong>) › <strong>Suscripciones</strong> › RELO. Mientras tengas la suscripción activa, <strong>Configuración › Premium › Administrar suscripción</strong> en RELO abre la misma pantalla.</p>
+  <ul>
+    <li>Eliminar la app no cancela tu suscripción.</li>
+    <li>Cancela al menos 24 horas antes de tu próxima fecha de cobro para que no se te cobre el siguiente periodo.</li>
+    <li>Apple gestiona los pagos y los reembolsos. Para pedir un reembolso, entra a <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ul>
+
+  <h3>Tengo un dispositivo nuevo o reinstalé la app. ¿Cómo recupero mis compras?</h3>
+  <p>En un dispositivo con sesión iniciada en la Cuenta de Apple que usaste para comprar, abre RELO y toca <strong>Configuración › Premium › Restaurar compras</strong>. Tu suscripción Premium y Quitar anuncios vuelven a estar activos. RELO no tiene registro, así que las compras se verifican con tu Cuenta de Apple.</p>
+  <p>Tu historial y tus resultados de Body Check se guardan solo en tu dispositivo, así que restaurar compras no los recupera. Si restauras todo tu dispositivo desde una copia de seguridad, también podrían volver.</p>
+
+  <h3>¿Qué diferencia hay entre Quitar anuncios y Premium?</h3>
+  <ul>
+    <li>Todas las rutinas y los ejercicios de estiramiento son gratis, tengas o no cualquiera de los dos.</li>
+    <li><strong>Quitar anuncios</strong>: una compra única que desactiva los anuncios. No es una suscripción y no incluye las funciones Premium.</li>
+    <li><strong>RELO Premium</strong>: una suscripción mensual o anual con renovación automática. Agrega Body Check, "Plan de equilibrio de 4 semanas", "Describe y recibe una rutina", "Pregunta sobre el ejercicio" e "Informes semanales y mensuales", y no muestra anuncios mientras tengas la suscripción.</li>
+    <li>Los precios se muestran en tu moneda local en la pantalla Premium de la app y en el App Store.</li>
+  </ul>
+
+  <h3>¿Qué pasa cuando termina la prueba gratis de 7 días?</h3>
+  <p>Tanto el plan mensual como el anual empiezan con una prueba gratis de 7 días. La prueba solo se puede usar una vez por Cuenta de Apple.</p>
+  <ul>
+    <li>Si no cancelas al menos 24 horas antes de que termine la prueba, se te cobra el plan que elegiste (mensual o anual) y después se renueva automáticamente.</li>
+    <li>Si permites las notificaciones, la app te avisa 2 días antes de que termine la prueba.</li>
+    <li>Para cancelar, consulta "¿Cómo cancelo mi suscripción?" más arriba.</li>
+    <li>Sin suscribirte, puedes probar gratis Body Check 1 vez, "Describe y recibe una rutina" 3 veces y "Pregunta sobre el ejercicio" 3 veces.</li>
+  </ul>
+
+  <h3>¿Cómo borro mi historial?</h3>
+  <ul>
+    <li>Uno por uno: en la pestaña <strong>Historial</strong>, mantén presionado un registro para elegir uno o varios y eliminarlos. Puedes eliminar un registro de Body Check de la misma forma.</li>
+    <li>Todo a la vez: en la app, ve a <strong>Configuración › Datos</strong> y toca <strong>Borrar todo el historial</strong>, <strong>Borrar historial de Body Check</strong> o <strong>Borrar marcas de incomodidad</strong>.</li>
+    <li>Los entrenamientos guardados en Salud se quedan ahí. Bórralos en la app Salud.</li>
+    <li>Eliminar la app borra todo el historial de tu dispositivo. El historial borrado no se puede recuperar.</li>
+  </ul>
+
+  <h3>¿Dónde se guardan mis fotos de Body Check?</h3>
+  <p>No se guardan. La app solo lee las posiciones de las articulaciones en la foto que tomas o eliges, con el framework Vision de Apple en tu dispositivo, y nunca envía la foto a un servidor. Solo se conservan las posiciones de las articulaciones y los valores de inclinación. Los resultados de Body Check son valores de referencia observados en una foto. Esto no es un diagnóstico médico.</p>
+
+  <h3>La guía por voz no se descarga</h3>
+  <p>La guía por voz en inglés viene incluida en la app. Los demás idiomas se descargan por internet cuando eliges el idioma o abres la app.</p>
+  <ul>
+    <li>Revisa tu conexión a internet y vuelve a abrir la app.</li>
+    <li>Si en <strong>Configuración › Sonido</strong> aparece "No se descargó la voz · Reintentar", tócalo para intentarlo de nuevo. Abrir <strong>Configuración › Idioma</strong> también vuelve a iniciar la descarga.</li>
+    <li>La descarga puede fallar si tu dispositivo tiene poco espacio de almacenamiento.</li>
+    <li>Hasta que termine la descarga, la app usa la voz integrada de tu dispositivo.</li>
+    <li>Si no se oye nada, revisa que Guía por voz esté activada en <strong>Configuración › Sonido</strong> y que el volumen de tu dispositivo esté subido.</li>
+  </ul>
+
+  <h3>No me llegan los recordatorios</h3>
+  <ul>
+    <li>En la app, revisa que "Recordatorios para estirar" esté activado en <strong>Configuración › Recordatorios</strong>, y revisa la hora y los días de repetición.</li>
+    <li>En <strong>Configuración › Notificaciones › RELO</strong> del iPhone, revisa que las notificaciones estén permitidas.</li>
+    <li>Un modo de concentración (como No molestar) puede ocultar las notificaciones.</li>
+    <li>Los recordatorios se programan con anticipación en tu dispositivo. Si no abres la app durante mucho tiempo, se detienen al terminar el <strong>Periodo de recordatorios</strong> (Configuración › Recordatorios). Basta con abrir la app una vez para que vuelvan a funcionar.</li>
+  </ul>
+
+  <h3>¿RELO es un servicio médico?</h3>
+  <p>No. RELO ofrece orientación general sobre estiramientos. No es consejo médico ni un dispositivo médico. Si algo te duele, detente de inmediato. Si tienes alguna condición médica, estás embarazada o te operaron hace poco, consulta a tu médico antes de empezar. Los resultados de Body Check y las respuestas de la IA son solo de referencia y no son una evaluación médica.</p>
+
+  <h2>Privacidad</h2>
+  <p>Para saber qué información maneja RELO y cómo, lee nuestra <a href="https://accjang.github.io/relo-privacy/#es">Política de privacidad</a>. En la app, ábrela desde <strong>Configuración › Acerca de › Política de privacidad</strong>.</p>
+</section>
+
+<section id="pt" lang="pt-BR">
+  <h1>Suporte do RELO</h1>
+  <p class="meta">Última atualização: 2026-10-28</p>
+  <p>Se você tiver alguma dúvida sobre o RELO, confira primeiro as perguntas frequentes abaixo. Se elas não resolverem, envie um e-mail para nós.</p>
+
+  <h2>Fale conosco</h2>
+  <p class="contact">E-mail: <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>Conseguimos verificar mais rápido se você incluir:</p>
+  <ul>
+    <li>A versão do app (no app: <strong>Configurações › Sobre › Versão</strong>)</li>
+    <li>O modelo do seu iPhone e a versão do iOS</li>
+    <li>Em qual tela você estava, o que fez e o que aconteceu (uma captura de tela ajuda)</li>
+    <li>Para dúvidas sobre compras ou privacidade, seu <strong>ID de suporte</strong> (no app: <strong>Configurações › Dados › ID de suporte</strong>)</li>
+  </ul>
+  <p>Lemos todos os e-mails e procuramos responder, mas não podemos prometer quanto tempo a resposta vai levar. Pedidos sobre privacidade são atendidos conforme descrito na nossa Política de Privacidade.</p>
+
+  <h2>Perguntas frequentes</h2>
+
+  <h3>Como cancelo minha assinatura?</h3>
+  <p>Abra o app <strong>Ajustes</strong> do iPhone › seu nome no topo (<strong>Conta Apple</strong>) › <strong>Assinaturas</strong> › RELO. Enquanto a assinatura estiver ativa, <strong>Configurações › Premium › Gerenciar assinatura</strong> no RELO abre a mesma tela.</p>
+  <ul>
+    <li>Apagar o app não cancela sua assinatura.</li>
+    <li>Cancele pelo menos 24 horas antes da próxima data de cobrança para evitar a cobrança do período seguinte.</li>
+    <li>A Apple cuida dos pagamentos e reembolsos. Para pedir um reembolso, acesse <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ul>
+
+  <h3>Troquei de aparelho ou reinstalei o app. Como recupero minhas compras?</h3>
+  <p>Em um aparelho conectado com a Conta Apple usada na compra, abra o RELO e toque em <strong>Configurações › Premium › Restaurar compras</strong>. Sua assinatura Premium e o Remover anúncios voltam a valer. O RELO não tem cadastro, então as compras são verificadas pela sua Conta Apple.</p>
+  <p>Seu histórico e os resultados do Body Check ficam só no seu aparelho, então restaurar compras não os traz de volta. Se você restaurar o aparelho inteiro a partir de um backup, eles também podem voltar.</p>
+
+  <h3>Qual é a diferença entre Remover anúncios e Premium?</h3>
+  <ul>
+    <li>Todas as rotinas e exercícios de alongamento são gratuitos, com ou sem qualquer um dos dois.</li>
+    <li><strong>Remover anúncios</strong>: uma compra única que desativa os anúncios. Não é uma assinatura e não inclui os recursos Premium.</li>
+    <li><strong>RELO Premium</strong>: uma assinatura mensal ou anual com renovação automática. Inclui Body Check, "Plano de equilíbrio de 4 semanas", "Descreva e receba uma rotina", "Pergunte sobre o exercício" e "Relatório semanal / mensal", e não mostra anúncios enquanto a assinatura estiver ativa.</li>
+    <li>Os preços aparecem na moeda do seu país na tela Premium do app e na App Store.</li>
+  </ul>
+
+  <h3>O que acontece quando o teste grátis de 7 dias termina?</h3>
+  <p>Os planos mensal e anual começam com um teste grátis de 7 dias. O teste só pode ser usado uma vez por Conta Apple.</p>
+  <ul>
+    <li>Se você não cancelar pelo menos 24 horas antes do fim do teste, o plano escolhido (mensal ou anual) é cobrado e depois renovado automaticamente.</li>
+    <li>Se você permitir notificações, o app avisa 2 dias antes do fim do teste.</li>
+    <li>Para cancelar, veja "Como cancelo minha assinatura?" acima.</li>
+    <li>Sem assinar, você pode experimentar de graça o Body Check 1 vez, "Descreva e receba uma rotina" 3 vezes e "Pergunte sobre o exercício" 3 vezes.</li>
+  </ul>
+
+  <h3>Como apago meu histórico?</h3>
+  <ul>
+    <li>Um de cada vez: na aba <strong>Histórico</strong>, toque e segure um registro para selecionar um ou mais e excluí-los. Você pode excluir um registro do Body Check do mesmo jeito.</li>
+    <li>Tudo de uma vez: no app, acesse <strong>Configurações › Dados</strong> e toque em <strong>Excluir todo o histórico</strong>, <strong>Apagar histórico do Body Check</strong> ou <strong>Excluir marcas de desconforto</strong>.</li>
+    <li>Os treinos salvos no app Saúde continuam lá. Exclua-os no app Saúde.</li>
+    <li>Apagar o app remove todo o histórico do seu aparelho. O histórico excluído não pode ser recuperado.</li>
+  </ul>
+
+  <h3>Onde ficam salvas as fotos do Body Check?</h3>
+  <p>Elas não são salvas. O app lê apenas a posição das articulações na foto que você tira ou escolhe, usando o framework Vision da Apple no seu aparelho, e nunca envia a foto para um servidor. Só ficam guardadas as posições das articulações e os valores de inclinação. Os resultados do Body Check são valores de referência observados em uma foto. Isso não é um diagnóstico médico.</p>
+
+  <h3>O Guia por voz não está sendo baixado</h3>
+  <p>O Guia por voz em inglês já vem no app. Os outros idiomas são baixados pela internet quando você escolhe o idioma ou abre o app.</p>
+  <ul>
+    <li>Verifique sua conexão com a internet e abra o app de novo.</li>
+    <li>Se <strong>Configurações › Som</strong> mostrar "Falha ao baixar a voz · Tentar de novo", toque nessa opção para tentar novamente. Abrir <strong>Configurações › Idioma</strong> também reinicia o download.</li>
+    <li>O download pode falhar se o aparelho estiver com pouco espaço de armazenamento.</li>
+    <li>Até o download terminar, o app usa a voz integrada do seu aparelho.</li>
+    <li>Se não houver nenhum som, verifique se o Guia por voz está ativado em <strong>Configurações › Som</strong> e se o volume do aparelho está alto.</li>
+  </ul>
+
+  <h3>Não estou recebendo lembretes</h3>
+  <ul>
+    <li>No app, verifique se "Lembretes de alongamento" está ativado em <strong>Configurações › Lembretes</strong> e confira o horário e os dias de repetição.</li>
+    <li>Nos <strong>Ajustes › Notificações › RELO</strong> do iPhone, verifique se as notificações estão permitidas.</li>
+    <li>Um modo de Foco (como Não Perturbe) pode ocultar as notificações.</li>
+    <li>Os lembretes são agendados com antecedência no seu aparelho. Se você ficar muito tempo sem abrir o app, eles param depois do <strong>Período dos lembretes</strong> (Configurações › Lembretes). Basta abrir o app uma vez para que voltem.</li>
+  </ul>
+
+  <h3>O RELO é um serviço médico?</h3>
+  <p>Não. O RELO oferece orientações gerais de alongamento. Não é aconselhamento médico nem um dispositivo médico. Se sentir dor, pare imediatamente. Se você tem alguma condição de saúde, está grávida ou passou por cirurgia recentemente, consulte seu médico antes de começar. Os resultados do Body Check e as respostas da IA são apenas para referência e não são uma avaliação médica.</p>
+
+  <h2>Privacidade</h2>
+  <p>Para saber quais informações o RELO usa e como, leia nossa <a href="https://accjang.github.io/relo-privacy/#pt">Política de Privacidade</a>. No app, abra em <strong>Configurações › Sobre › Política de Privacidade</strong>.</p>
+</section>
+
+<section id="zh-Hant" lang="zh-Hant">
+  <h1>RELO 客戶支援</h1>
+  <p class="meta">最後更新：2026-10-28</p>
+  <p>如果你對 RELO 有疑問，請先看看下面的常見問題。如果還是沒有解決，歡迎寄電子郵件告訴我們。</p>
+
+  <h2>聯絡我們</h2>
+  <p class="contact">電子郵件：<a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>郵件中附上以下資訊，可以幫助我們更快確認問題：</p>
+  <ul>
+    <li>App 版本（在 App 中：<strong>設定 › 關於 › 版本</strong>）</li>
+    <li>你的 iPhone 機型和 iOS 版本</li>
+    <li>你當時在哪個畫面、做了什麼、發生了什麼事（附上截圖會更好）</li>
+    <li>如果是關於購買或隱私權的問題，請附上你的<strong>支援 ID</strong>（在 App 中：<strong>設定 › 資料 › 支援 ID</strong>）</li>
+  </ul>
+  <p>每封郵件我們都會閱讀並盡量回覆，但無法保證回覆需要多久。隱私權相關的要求會依照我們的隱私權政策所述方式處理。</p>
+
+  <h2>常見問題</h2>
+
+  <h3>要怎麼取消訂閱？</h3>
+  <p>打開 iPhone 的<strong>設定</strong> App › 最上方你的名稱（<strong>Apple 帳號</strong>）› <strong>訂閱項目</strong> › RELO。訂閱期間，在 RELO 中點一下<strong>設定 › 高級版 › 管理訂閱</strong>也會打開同一個畫面。</p>
+  <ul>
+    <li>刪除 App 不會取消訂閱。</li>
+    <li>請至少在下一個扣款日的 24 小時前取消，就不會被收取下一期的費用。</li>
+    <li>付款和退款由 Apple 處理。如需申請退款，請前往 <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>。</li>
+  </ul>
+
+  <h3>換了新裝置或重新安裝 App，要怎麼找回購買的項目？</h3>
+  <p>在登入購買時所用 Apple 帳號的裝置上打開 RELO，點一下<strong>設定 › 高級版 › 恢復購買項目</strong>。高級版訂閱和移除廣告會重新套用。RELO 不需要註冊，所以會透過你的 Apple 帳號確認購買。</p>
+  <p>你的運動紀錄和 Body Check 紀錄只儲存在你的裝置上，所以恢復購買項目不會找回這些紀錄。從備份回復整台裝置時，這些紀錄也可能一併回復。</p>
+
+  <h3>移除廣告和高級版有什麼不同？</h3>
+  <ul>
+    <li>不論有沒有購買其中任何一項，所有伸展練習和動作都可以免費使用。</li>
+    <li><strong>移除廣告</strong>：一次性購買，購買後就不會再顯示廣告。這不是訂閱，也不包含高級版功能。</li>
+    <li><strong>RELO 高級版</strong>：按月或按年自動續訂的訂閱。可以使用 Body Check、4 週平衡計畫、描述狀態取得推薦、動作提問和每週／每月報告，訂閱期間也不會顯示廣告。</li>
+    <li>價格會以你所在地區的幣別顯示在 App 的高級版畫面和 App Store 上。</li>
+  </ul>
+
+  <h3>7 天免費試用結束後會怎樣？</h3>
+  <p>月訂閱和年訂閱都從 7 天免費試用開始。每個 Apple 帳號只能使用一次免費試用。</p>
+  <ul>
+    <li>除非你在試用結束前至少 24 小時取消，否則會依你選擇的方案（月訂閱或年訂閱）扣款，之後自動續訂。</li>
+    <li>如果你允許了通知，App 會在試用結束前 2 天提醒你。</li>
+    <li>取消方法請參考上面的「要怎麼取消訂閱？」。</li>
+    <li>即使沒有訂閱，也可以免費試用 Body Check 1 次、描述狀態取得推薦 3 次、動作提問 3 次。</li>
+  </ul>
+
+  <h3>要怎麼刪除紀錄？</h3>
+  <ul>
+    <li>逐筆刪除：在<strong>紀錄</strong>標籤頁中，按住一筆紀錄就能選取一筆或多筆並刪除。Body Check 紀錄也可以用同樣的方式刪除。</li>
+    <li>全部刪除：在 App 中前往<strong>設定 › 資料</strong>，點一下<strong>刪除所有紀錄</strong>、<strong>清除 Body Check 紀錄</strong>或<strong>清除不適標記</strong>。</li>
+    <li>已儲存到「健康」的體能訓練會保留在那裡，請在「健康」App 中刪除。</li>
+    <li>刪除 App 會刪除裝置上的所有紀錄。已刪除的紀錄無法復原。</li>
+  </ul>
+
+  <h3>Body Check 的照片儲存在哪裡？</h3>
+  <p>照片不會被儲存。App 會在你的裝置上使用 Apple 的 Vision 框架，只從你拍攝或選擇的照片讀取關節位置，照片絕不會傳送到伺服器。只會保留關節位置和傾斜數值。Body Check 結果是從照片中觀察到的參考數值，並非醫療評估。</p>
+
+  <h3>語音引導無法下載</h3>
+  <p>英文語音引導已內建在 App 中。其他語言會在你選擇該語言或打開 App 時透過網路下載。</p>
+  <ul>
+    <li>請檢查網路連線，然後重新打開 App。</li>
+    <li>如果<strong>設定 › 聲音</strong>中顯示「語音下載失敗 · 重試」，點一下就能重新下載。打開<strong>設定 › 語言</strong>也會重新開始下載。</li>
+    <li>如果裝置的儲存空間不足，下載可能會失敗。</li>
+    <li>下載完成前，App 會使用裝置內建的語音。</li>
+    <li>如果完全沒有聲音，請確認<strong>設定 › 聲音</strong>中的語音引導已開啟，並檢查裝置音量是否已調高。</li>
+  </ul>
+
+  <h3>收不到提醒</h3>
+  <ul>
+    <li>在 App 的<strong>設定 › 提醒</strong>中，確認「伸展提醒」已開啟，並檢查時間和重複的日子。</li>
+    <li>在 iPhone 的<strong>設定 › 通知 › RELO</strong> 中，確認已允許通知。</li>
+    <li>專注模式（例如「勿擾模式」）可能會讓通知不顯示。</li>
+    <li>提醒是事先在你的裝置上排定的。如果你很久沒有打開 App，提醒會在<strong>提醒期間</strong>（設定 › 提醒）結束後停止。打開一次 App 就會重新開始。</li>
+  </ul>
+
+  <h3>RELO 是醫療服務嗎？</h3>
+  <p>不是。RELO 提供一般性的伸展指引，並非醫療建議，也不是醫療器材。如果感到疼痛，請立即停止。如有慢性疾病、正在懷孕或近期動過手術，請在開始前先諮詢醫師。Body Check 結果和 AI 回答僅供參考，並非醫療評估。</p>
+
+  <h2>隱私權</h2>
+  <p>想了解 RELO 會處理哪些資料以及如何處理，請閱讀我們的<a href="https://accjang.github.io/relo-privacy/#zh-Hant">隱私權政策</a>。在 App 中，可以從<strong>設定 › 關於 › 隱私權政策</strong>打開。</p>
+</section>
+
+<section id="it" lang="it">
+  <h1>Assistenza RELO</h1>
+  <p class="meta">Ultimo aggiornamento: 2026-10-28</p>
+  <p>Se hai una domanda su RELO, controlla prima le domande frequenti qui sotto. Se non trovi la risposta, scrivici un'email.</p>
+
+  <h2>Contattaci</h2>
+  <p class="contact">Email: <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>Possiamo verificare più in fretta se ci indichi:</p>
+  <ul>
+    <li>La versione dell'app (nell'app: <strong>Impostazioni › Info › Versione</strong>)</li>
+    <li>Il modello di iPhone e la versione di iOS</li>
+    <li>In quale schermata eri, cosa hai fatto e cosa è successo (uno screenshot aiuta)</li>
+    <li>Per domande su acquisti o privacy, il tuo <strong>ID assistenza</strong> (nell'app: <strong>Impostazioni › Dati › ID assistenza</strong>)</li>
+  </ul>
+  <p>Leggiamo ogni email e cerchiamo di rispondere, ma non possiamo promettere quanto tempo servirà. Le richieste sulla privacy vengono gestite come descritto nella nostra Informativa sulla privacy.</p>
+
+  <h2>Domande frequenti</h2>
+
+  <h3>Come disdico l'abbonamento?</h3>
+  <p>Apri l'app <strong>Impostazioni</strong> dell'iPhone › il tuo nome in alto (<strong>Account Apple</strong>) › <strong>Abbonamenti</strong> › RELO. Mentre l'abbonamento è attivo, anche <strong>Impostazioni › Premium › Gestisci abbonamento</strong> in RELO apre la stessa schermata.</p>
+  <ul>
+    <li>Eliminare l'app non disdice l'abbonamento.</li>
+    <li>Disdici almeno 24 ore prima della prossima data di addebito per non pagare il periodo successivo.</li>
+    <li>Pagamenti e rimborsi sono gestiti da Apple. Per chiedere un rimborso, vai su <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ul>
+
+  <h3>Ho un nuovo dispositivo o ho reinstallato l'app. Come recupero i miei acquisti?</h3>
+  <p>Su un dispositivo con l'Account Apple che hai usato per l'acquisto, apri RELO e tocca <strong>Impostazioni › Premium › Ripristina acquisti</strong>. L'abbonamento Premium e Rimuovi la pubblicità tornano attivi. RELO non richiede registrazione, quindi gli acquisti vengono verificati tramite il tuo Account Apple.</p>
+  <p>Lo storico e i risultati di Body Check sono salvati solo sul tuo dispositivo, quindi ripristinare gli acquisti non li riporta. Ripristinare l'intero dispositivo da un backup può riportare anche quelli.</p>
+
+  <h3>Che differenza c'è tra Rimuovi la pubblicità e Premium?</h3>
+  <ul>
+    <li>Tutte le routine e gli esercizi di stretching sono gratuiti, con o senza uno dei due.</li>
+    <li><strong>Rimuovi la pubblicità</strong>: un acquisto unico che disattiva la pubblicità. Non è un abbonamento e non include le funzioni Premium.</li>
+    <li><strong>RELO Premium</strong>: un abbonamento mensile o annuale a rinnovo automatico. Aggiunge Body Check, “Piano equilibrio 4 settimane”, “Descrivi e ricevi una routine”, “Domande sull'esercizio” e “Report settimanali e mensili”, e non mostra pubblicità finché l'abbonamento è attivo.</li>
+    <li>I prezzi sono indicati nella tua valuta locale nella schermata Premium dell'app e sull'App Store.</li>
+  </ul>
+
+  <h3>Cosa succede quando finiscono i 7 giorni di prova gratuita?</h3>
+  <p>Sia il piano mensile sia quello annuale iniziano con 7 giorni di prova gratuita. La prova si può usare una sola volta per Account Apple.</p>
+  <ul>
+    <li>Se non disdici almeno 24 ore prima della fine della prova, ti viene addebitato il piano che hai scelto (mensile o annuale), che poi si rinnova automaticamente.</li>
+    <li>Se consenti le notifiche, l'app te lo ricorda 2 giorni prima della fine della prova.</li>
+    <li>Per disdire, vedi “Come disdico l'abbonamento?” qui sopra.</li>
+    <li>Senza abbonamento puoi provare gratis Body Check 1 volta, “Descrivi e ricevi una routine” 3 volte e “Domande sull'esercizio” 3 volte.</li>
+  </ul>
+
+  <h3>Come elimino lo storico?</h3>
+  <ul>
+    <li>Uno alla volta: nella scheda <strong>Storico</strong>, tieni premuto un elemento per selezionarne uno o più ed eliminarli. Allo stesso modo puoi eliminare anche un risultato di Body Check.</li>
+    <li>Tutto insieme: nell'app vai in <strong>Impostazioni › Dati</strong> e tocca <strong>Elimina tutto lo storico</strong>, <strong>Cancella lo storico Body Check</strong> o <strong>Elimina segnalazioni di disagio</strong>.</li>
+    <li>Gli allenamenti salvati in Salute restano lì. Eliminali dall'app Salute.</li>
+    <li>Eliminando l'app si cancella tutto lo storico sul dispositivo. Lo storico eliminato non si può recuperare.</li>
+  </ul>
+
+  <h3>Dove vengono salvate le foto di Body Check?</h3>
+  <p>Non vengono salvate. Dalla foto che scatti o scegli, l'app legge solo le posizioni delle articolazioni usando il framework Vision di Apple sul tuo dispositivo, e non invia mai la foto a un server. Vengono conservati solo le posizioni delle articolazioni e i valori di inclinazione. I risultati di Body Check sono valori di riferimento osservati in una foto, non una valutazione medica.</p>
+
+  <h3>La guida vocale non si scarica</h3>
+  <p>La guida vocale in inglese è inclusa nell'app. Le altre lingue vengono scaricate da internet quando scegli la lingua o apri l'app.</p>
+  <ul>
+    <li>Controlla la connessione a internet e riapri l'app.</li>
+    <li>Se in <strong>Impostazioni › Audio</strong> vedi “Download voce non riuscito · Riprova”, toccalo per riprovare. Anche aprire <strong>Impostazioni › Lingua</strong> fa ripartire il download.</li>
+    <li>Il download potrebbe non riuscire se lo spazio libero sul dispositivo è poco.</li>
+    <li>Finché il download non è completato, l'app usa la voce integrata del dispositivo.</li>
+    <li>Se non senti nessun suono, controlla che Guida vocale sia attiva in <strong>Impostazioni › Audio</strong> e che il volume del dispositivo sia alzato.</li>
+  </ul>
+
+  <h3>Non ricevo i promemoria</h3>
+  <ul>
+    <li>Nell'app, controlla che “Promemoria stretching” sia attivo in <strong>Impostazioni › Promemoria</strong>, e controlla l'orario e i giorni di ripetizione.</li>
+    <li>In <strong>Impostazioni › Notifiche › RELO</strong> dell'iPhone, controlla che le notifiche siano consentite.</li>
+    <li>Una modalità Full immersion (come Non disturbare) può nascondere le notifiche.</li>
+    <li>I promemoria vengono programmati in anticipo sul dispositivo. Se non apri l'app per molto tempo, si fermano allo scadere della <strong>Durata promemoria</strong> (Impostazioni › Promemoria). Basta aprire l'app una volta per farli ripartire.</li>
+  </ul>
+
+  <h3>RELO è un servizio medico?</h3>
+  <p>No. RELO offre indicazioni generali di stretching. Non è un consiglio medico e non è un dispositivo medico. Fermati subito se senti dolore. Se hai una condizione medica, sei in gravidanza o hai subito di recente un intervento chirurgico, consulta il tuo medico prima di iniziare. I risultati di Body Check e le risposte dell'IA sono solo un riferimento e non sono una valutazione medica.</p>
+
+  <h2>Privacy</h2>
+  <p>Per sapere quali informazioni gestisce RELO e in che modo, leggi la nostra <a href="https://accjang.github.io/relo-privacy/#it">Informativa sulla privacy</a>. Nell'app, aprila da <strong>Impostazioni › Info › Informativa sulla privacy</strong>.</p>
+</section>
+
+<section id="pl" lang="pl">
+  <h1>Pomoc RELO</h1>
+  <p class="meta">Ostatnia aktualizacja: 2026-10-28</p>
+  <p>Jeśli masz pytanie dotyczące RELO, najpierw sprawdź częste pytania poniżej. Jeśli nie znajdziesz w nich odpowiedzi, napisz do nas e-mail.</p>
+
+  <h2>Kontakt</h2>
+  <p class="contact">E-mail: <a href="mailto:gpawod2@gmail.com">gpawod2@gmail.com</a></p>
+  <p>Szybciej sprawdzimy sprawę, jeśli podasz:</p>
+  <ul>
+    <li>Wersję aplikacji (w aplikacji: <strong>Ustawienia › O aplikacji › Wersja</strong>)</li>
+    <li>Model iPhone’a i wersję iOS</li>
+    <li>Na jakim ekranie, po jakiej czynności i co dokładnie się stało (zrzut ekranu pomoże)</li>
+    <li>W pytaniach o zakupy lub prywatność – swoje <strong>ID wsparcia</strong> (w aplikacji: <strong>Ustawienia › Dane › ID wsparcia</strong>)</li>
+  </ul>
+  <p>Czytamy każdą wiadomość i staramy się odpowiedzieć, ale nie możemy obiecać, ile potrwa odpowiedź. Prośby dotyczące prywatności rozpatrujemy zgodnie z naszą Polityką prywatności.</p>
+
+  <h2>Częste pytania</h2>
+
+  <h3>Jak anulować subskrypcję?</h3>
+  <p>Otwórz aplikację <strong>Ustawienia</strong> na iPhonie › swoje imię i nazwisko na górze (<strong>Konto Apple</strong>) › <strong>Subskrypcje</strong> › RELO. Gdy subskrypcja jest aktywna, ten sam ekran otwiera też <strong>Ustawienia › Premium › Zarządzaj subskrypcją</strong> w RELO.</p>
+  <ul>
+    <li>Usunięcie aplikacji nie anuluje subskrypcji.</li>
+    <li>Anuluj co najmniej 24 godziny przed kolejną datą płatności, aby uniknąć opłaty za następny okres.</li>
+    <li>Płatności i zwroty obsługuje Apple. Aby poprosić o zwrot, wejdź na <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</li>
+  </ul>
+
+  <h3>Mam nowe urządzenie albo aplikacja została zainstalowana ponownie. Jak odzyskać zakupy?</h3>
+  <p>Na urządzeniu zalogowanym na to samo Konto Apple, którego użyto do zakupu, otwórz RELO i stuknij <strong>Ustawienia › Premium › Odtwórz zakupy</strong>. Subskrypcja Premium i Usuń reklamy wrócą. RELO nie wymaga rejestracji, więc zakupy są sprawdzane przez twoje Konto Apple.</p>
+  <p>Historia i wyniki Body Check są zapisane tylko na twoim urządzeniu, więc odtworzenie zakupów ich nie przywróci. Przywrócenie całego urządzenia z kopii zapasowej może przywrócić także je.</p>
+
+  <h3>Czym różni się Usuń reklamy od Premium?</h3>
+  <ul>
+    <li>Wszystkie zestawy i ćwiczenia rozciągające są bezpłatne – niezależnie od tego, czy masz którąś z tych opcji.</li>
+    <li><strong>Usuń reklamy</strong>: jednorazowy zakup, który wyłącza reklamy. To nie jest subskrypcja i nie obejmuje funkcji Premium.</li>
+    <li><strong>RELO Premium</strong>: subskrypcja miesięczna lub roczna, odnawiana automatycznie. Dodaje Body Check, „4-tygodniowy plan równowagi”, „Opisz, jak się czujesz”, „Pytania o ćwiczenia” oraz „Raporty tygodniowe i miesięczne”, a w czasie trwania subskrypcji nie pokazuje reklam.</li>
+    <li>Ceny są podane w lokalnej walucie na ekranie Premium w aplikacji i w App Store.</li>
+  </ul>
+
+  <h3>Co się stanie po zakończeniu 7-dniowego bezpłatnego okresu próbnego?</h3>
+  <p>Zarówno plan miesięczny, jak i roczny zaczyna się od 7-dniowego bezpłatnego okresu próbnego. Z okresu próbnego można skorzystać tylko raz na jedno Konto Apple.</p>
+  <ul>
+    <li>Jeśli nie anulujesz co najmniej 24 godziny przed końcem okresu próbnego, zostanie pobrana opłata za wybrany plan (miesięczny lub roczny), który potem odnawia się automatycznie.</li>
+    <li>Jeśli zezwolisz na powiadomienia, aplikacja przypomni o tym 2 dni przed końcem okresu próbnego.</li>
+    <li>Jak anulować – zobacz „Jak anulować subskrypcję?” powyżej.</li>
+    <li>Bez subskrypcji możesz bezpłatnie wypróbować Body Check 1 raz, „Opisz, jak się czujesz” 3 razy i „Pytania o ćwiczenia” 3 razy.</li>
+  </ul>
+
+  <h3>Jak usunąć historię?</h3>
+  <ul>
+    <li>Pojedynczo: na karcie <strong>Historia</strong> dotknij wpisu i przytrzymaj, aby zaznaczyć jeden lub kilka wpisów i je usunąć. Tak samo usuniesz wpis Body Check.</li>
+    <li>Wszystko naraz: w aplikacji przejdź do <strong>Ustawienia › Dane</strong> i stuknij <strong>Usuń całą historię</strong>, <strong>Wyczyść historię Body Check</strong> lub <strong>Usuń oznaczenia „Niewygodne”</strong>.</li>
+    <li>Treningi zapisane w aplikacji Zdrowie pozostaną tam. Usuń je w aplikacji Zdrowie.</li>
+    <li>Usunięcie aplikacji usuwa całą historię z urządzenia. Usuniętej historii nie da się odzyskać.</li>
+  </ul>
+
+  <h3>Gdzie są zapisywane zdjęcia z Body Check?</h3>
+  <p>Nigdzie – nie są zapisywane. Ze zrobionego lub wybranego zdjęcia aplikacja odczytuje tylko pozycje stawów za pomocą frameworka Vision firmy Apple na twoim urządzeniu i nigdy nie wysyła zdjęcia na serwer. Zachowywane są tylko pozycje stawów i wartości nachylenia. Wyniki Body Check to wartości referencyjne zaobserwowane na zdjęciu, a nie ocena medyczna.</p>
+
+  <h3>Komunikaty głosowe się nie pobierają</h3>
+  <p>Komunikaty głosowe po angielsku są wbudowane w aplikację. Inne języki są pobierane z internetu, gdy wybierzesz język lub otworzysz aplikację.</p>
+  <ul>
+    <li>Sprawdź połączenie z internetem i otwórz aplikację ponownie.</li>
+    <li>Jeśli w <strong>Ustawienia › Dźwięk</strong> widać „Nie udało się pobrać głosu · Ponów”, stuknij ten napis, aby spróbować jeszcze raz. Otwarcie <strong>Ustawienia › Język</strong> też ponownie uruchamia pobieranie.</li>
+    <li>Pobieranie może się nie udać, jeśli na urządzeniu brakuje miejsca.</li>
+    <li>Do czasu zakończenia pobierania aplikacja używa głosu wbudowanego w urządzenie.</li>
+    <li>Jeśli nie słychać żadnego dźwięku, sprawdź, czy Komunikaty głosowe są włączone w <strong>Ustawienia › Dźwięk</strong> i czy głośność urządzenia jest podkręcona.</li>
+  </ul>
+
+  <h3>Nie dostaję przypomnień</h3>
+  <ul>
+    <li>W aplikacji sprawdź, czy „Przypomnienia o rozciąganiu” są włączone w <strong>Ustawienia › Przypomnienia</strong>, a także sprawdź godzinę i dni powtarzania.</li>
+    <li>Na iPhonie w <strong>Ustawienia › Powiadomienia › RELO</strong> sprawdź, czy powiadomienia są dozwolone.</li>
+    <li>Tryb skupienia (np. Nie przeszkadzać) może ukrywać powiadomienia.</li>
+    <li>Przypomnienia są planowane z wyprzedzeniem na urządzeniu. Jeśli długo nie otwierasz aplikacji, przestają przychodzić, gdy minie <strong>Okres przypomnień</strong> (Ustawienia › Przypomnienia). Wystarczy raz otworzyć aplikację, aby znów działały.</li>
+  </ul>
+
+  <h3>Czy RELO to usługa medyczna?</h3>
+  <p>Nie. RELO zawiera ogólne wskazówki dotyczące rozciągania. To nie są porady medyczne ani wyrób medyczny. Jeśli coś boli, od razu przerwij. W przypadku problemów zdrowotnych, ciąży lub niedawnej operacji przed rozpoczęciem skonsultuj się z lekarzem. Wyniki Body Check i odpowiedzi AI mają charakter wyłącznie informacyjny i nie są oceną medyczną.</p>
+
+  <h2>Prywatność</h2>
+  <p>Aby dowiedzieć się, jakie informacje przetwarza RELO i w jaki sposób, przeczytaj naszą <a href="https://accjang.github.io/relo-privacy/#pl">Politykę prywatności</a>. W aplikacji otworzysz ją w <strong>Ustawienia › O aplikacji › Polityka prywatności</strong>.</p>
+</section>
+
+</main>
+<footer>RELO · Release · Ease · Loosen · Open</footer>
+<script>
+  // 언어 전환: 해시(#ko 등, 아래 langs 목록) → 그 섹션만 보이기. 해시가 없으면 브라우저 언어, 그 밖은 영어.
+  // 브라우저 언어는 앱(src/core/locale.ts localeFromTag)과 같은 규칙: 번체(zh-Hant·zh-TW·zh-HK·zh-MO)를 간체보다 먼저,
+  // 옛 코드 in(in-ID)은 id, 나머지는 언어 부분만.
+  (function () {
+    var langs = ['ko', 'en', 'zh', 'ja', 'de', 'fr', 'es', 'pt', 'zh-Hant', 'it', 'pl'];
+    document.documentElement.classList.add('js');
+    function known(code) {
+      for (var i = 0; i < langs.length; i++) {
+        if (langs[i].toLowerCase() === code.toLowerCase()) return langs[i];
+      }
+      return null;
+    }
+    function fromTag(tag) {
+      var lower = (tag || '').toLowerCase().replace(/_/g, '-');
+      var language = lower.split('-')[0];
+      if (language === 'zh') {
+        return known(/-(hant|tw|hk|mo)(-|$)/.test(lower) && !/-hans(-|$)/.test(lower) ? 'zh-Hant' : 'zh');
+      }
+      // 공개본(tools/build_privacy_public.py)은 langs를 출시 언어로 줄인다 → 목록에 없는 언어는 null(브라우저 다음 언어·영어로)
+      if (language === 'in') return known('id');
+      return known(language);
+    }
+    function pick() {
+      var hash = known((location.hash || '').replace('#', '').toLowerCase());
+      if (hash) return hash;
+      var tags = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+      for (var i = 0; i < tags.length; i++) {
+        var lang = fromTag(tags[i]);
+        if (lang) return lang;
+      }
+      return 'en';
+    }
+    function show(lang) {
+      langs.forEach(function (l) {
+        var section = document.getElementById(l);
+        if (section) section.classList.toggle('hidden', l !== lang);
+      });
+      document.querySelectorAll('nav a').forEach(function (a) {
+        a.setAttribute('aria-current', a.getAttribute('data-lang') === lang ? 'true' : 'false');
+      });
+      var current = document.getElementById(lang);
+      document.documentElement.lang = (current && current.getAttribute('lang')) || lang;
+    }
+    // 언어 버튼은 해시 변경을 기다리지 않고 바로 바꾼다(해시를 못 쓰는 환경 대비), 주소는 가능하면 갱신.
+    document.querySelectorAll('nav a').forEach(function (a) {
+      a.addEventListener('click', function (event) {
+        var lang = a.getAttribute('data-lang');
+        event.preventDefault();
+        show(lang);
+        try { history.replaceState(null, '', '#' + lang); } catch (e) { /* data: 주소 등 */ }
+        window.scrollTo(0, 0);
+      });
+    });
+    window.addEventListener('hashchange', function () { show(pick()); });
+    show(pick());
+  })();
+</script>
+</body>
+</html>
